@@ -18,9 +18,12 @@ class ProductFactory extends Factory
     {
         return [
             //Malabanannn
-            
-
-
+            'barcode' => fake()->numberBetween(100000, 999999),
+            'product_name' => fake()->name(),
+            'description' => fake()->text(100),
+            'price' => fake()->numberBetween(100, 1000),
+            'quantity' => fake()->numberBetween(1, 100),
+            'category' => fake()->word(),
         ];
     }
 }
